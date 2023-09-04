@@ -14,6 +14,58 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return stockbotAPI.post(`/api/v1/signup/`, payload.data)
 }
+function modules_two_factor_authentication_2fa_retrieve(payload) {
+  return stockbotAPI.get(`/modules/two-factor-authentication/2fa`)
+}
+function modules_two_factor_authentication_2fa_create(payload) {
+  return stockbotAPI.post(`/modules/two-factor-authentication/2fa`)
+}
+function modules_two_factor_authentication_twofactorauth_list(payload) {
+  return stockbotAPI.get(`/modules/two-factor-authentication/twofactorauth/`)
+}
+function modules_two_factor_authentication_twofactorauth_create(payload) {
+  return stockbotAPI.post(
+    `/modules/two-factor-authentication/twofactorauth/`,
+    payload.data
+  )
+}
+function modules_two_factor_authentication_twofactorauth_retrieve(payload) {
+  return stockbotAPI.get(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`
+  )
+}
+function modules_two_factor_authentication_twofactorauth_update(payload) {
+  return stockbotAPI.put(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`,
+    payload.data
+  )
+}
+function modules_two_factor_authentication_twofactorauth_partial_update(
+  payload
+) {
+  return stockbotAPI.patch(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`,
+    payload.data
+  )
+}
+function modules_two_factor_authentication_twofactorauth_destroy(payload) {
+  return stockbotAPI.delete(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`
+  )
+}
+function modules_two_factor_authentication_twofactorauth_send_otp_create(
+  payload
+) {
+  return stockbotAPI.post(
+    `/modules/two-factor-authentication/twofactorauth/send_otp/`,
+    payload.data
+  )
+}
+function modules_two_factor_authentication_verify_destroy(payload) {
+  return stockbotAPI.delete(
+    `/modules/two-factor-authentication/verify/${payload.id}/`
+  )
+}
 function rest_auth_login_create(payload) {
   return stockbotAPI.post(`/rest-auth/login/`, payload.data)
 }
@@ -51,6 +103,16 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  modules_two_factor_authentication_2fa_retrieve,
+  modules_two_factor_authentication_2fa_create,
+  modules_two_factor_authentication_twofactorauth_list,
+  modules_two_factor_authentication_twofactorauth_create,
+  modules_two_factor_authentication_twofactorauth_retrieve,
+  modules_two_factor_authentication_twofactorauth_update,
+  modules_two_factor_authentication_twofactorauth_partial_update,
+  modules_two_factor_authentication_twofactorauth_destroy,
+  modules_two_factor_authentication_twofactorauth_send_otp_create,
+  modules_two_factor_authentication_verify_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
