@@ -9,10 +9,10 @@ function api_docs_schema_retrieve(payload) {
   })
 }
 function api_v1_login_create(payload) {
-  return stockbotAPI.post(`/api/v1/login/`, payload.data)
+  return stockbotAPI.post(`/api/v1/login/`, payload)
 }
 function api_v1_signup_create(payload) {
-  return stockbotAPI.post(`/api/v1/signup/`, payload.data)
+  return stockbotAPI.post(`/api/v1/signup/`, payload)
 }
 function modules_two_factor_authentication_2fa_retrieve(payload) {
   return stockbotAPI.get(`/modules/two-factor-authentication/2fa`)
@@ -26,7 +26,7 @@ function modules_two_factor_authentication_twofactorauth_list(payload) {
 function modules_two_factor_authentication_twofactorauth_create(payload) {
   return stockbotAPI.post(
     `/modules/two-factor-authentication/twofactorauth/`,
-    payload.data
+    payload
   )
 }
 function modules_two_factor_authentication_twofactorauth_retrieve(payload) {
@@ -37,7 +37,7 @@ function modules_two_factor_authentication_twofactorauth_retrieve(payload) {
 function modules_two_factor_authentication_twofactorauth_update(payload) {
   return stockbotAPI.put(
     `/modules/two-factor-authentication/twofactorauth/${payload.id}/`,
-    payload.data
+    payload
   )
 }
 function modules_two_factor_authentication_twofactorauth_partial_update(
@@ -45,7 +45,7 @@ function modules_two_factor_authentication_twofactorauth_partial_update(
 ) {
   return stockbotAPI.patch(
     `/modules/two-factor-authentication/twofactorauth/${payload.id}/`,
-    payload.data
+    payload
   )
 }
 function modules_two_factor_authentication_twofactorauth_destroy(payload) {
@@ -58,7 +58,7 @@ function modules_two_factor_authentication_twofactorauth_send_otp_create(
 ) {
   return stockbotAPI.post(
     `/modules/two-factor-authentication/twofactorauth/send_otp/`,
-    payload.data
+    payload
   )
 }
 function modules_two_factor_authentication_verify_destroy(payload) {
@@ -67,7 +67,7 @@ function modules_two_factor_authentication_verify_destroy(payload) {
   )
 }
 function rest_auth_login_create(payload) {
-  return stockbotAPI.post(`/rest-auth/login/`, payload.data)
+  return stockbotAPI.post(`/rest-auth/login/`, payload)
 }
 function rest_auth_logout_retrieve(payload) {
   return stockbotAPI.get(`/rest-auth/logout/`)
@@ -76,28 +76,28 @@ function rest_auth_logout_create(payload) {
   return stockbotAPI.post(`/rest-auth/logout/`)
 }
 function rest_auth_password_change_create(payload) {
-  return stockbotAPI.post(`/rest-auth/password/change/`, payload.data)
+  return stockbotAPI.post(`/rest-auth/password/change/`, payload)
 }
 function rest_auth_password_reset_create(payload) {
-  return stockbotAPI.post(`/rest-auth/password/reset/`, payload.data)
+  return stockbotAPI.post(`/rest-auth/password/reset/`, payload)
 }
 function rest_auth_password_reset_confirm_create(payload) {
-  return stockbotAPI.post(`/rest-auth/password/reset/confirm/`, payload.data)
+  return stockbotAPI.post(`/rest-auth/password/reset/confirm/`, payload)
 }
 function rest_auth_registration_create(payload) {
-  return stockbotAPI.post(`/rest-auth/registration/`, payload.data)
+  return stockbotAPI.post(`/rest-auth/registration/`, payload)
 }
 function rest_auth_registration_verify_email_create(payload) {
-  return stockbotAPI.post(`/rest-auth/registration/verify-email/`, payload.data)
+  return stockbotAPI.post(`/rest-auth/registration/verify-email/`, payload)
 }
 function rest_auth_user_retrieve(payload) {
   return stockbotAPI.get(`/rest-auth/user/`)
 }
 function rest_auth_user_update(payload) {
-  return stockbotAPI.put(`/rest-auth/user/`, payload.data)
+  return stockbotAPI.put(`/rest-auth/user/`, payload)
 }
 function rest_auth_user_partial_update(payload) {
-  return stockbotAPI.patch(`/rest-auth/user/`, payload.data)
+  return stockbotAPI.patch(`/rest-auth/user/`, payload)
 }
 export const apiService = {
   api_docs_schema_retrieve,
